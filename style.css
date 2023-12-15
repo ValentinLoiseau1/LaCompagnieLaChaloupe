@@ -1,0 +1,714 @@
+/* Variable */
+:root {
+    --marronFoncer: #552800;
+    --marronClair: #BCA47F;
+}
+
+/* Poppins */
+@font-face {
+    font-display: swap; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('font/poppins-v20-latin-regular.woff2') format('woff2');
+}
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: url('font/poppins-v20-latin-800.woff2') format('woff2'); 
+}
+/*  */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background-color: var(--marronClair);
+}
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto; /* pour que sa soit centrer si mon ecran fait 1400 px */
+}
+
+#fondClair{
+    background-color: var(--marronClair);
+}
+
+.fondDePage{
+    background-color: var(--marronClair);
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Rubik', sans-serif;
+}
+
+/* =====Header===== */
+#bandeau{
+    background-color:var(--marronFoncer);
+    display: flex;
+    justify-content: center;
+}
+
+#bandeau img{
+    padding: 15px;
+}
+
+#burger{
+    background-color: var(--marronClair);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 40px;
+}
+
+#burger i{
+    font-size: 40px;
+}
+
+#menuPrincipal ul{
+    display: none;
+} 
+
+#menuPrincipal{
+    display: none;
+}
+
+#menuPrincipalMobile{
+    display: flex;
+    justify-content: center;
+}
+
+#menuPrincipalMobile ul{   
+    display: none;
+    background-color:var(--marronClair);
+    font-size: 1.9rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    line-height: 70px;
+    position: absolute;
+    z-index: 1000;
+}
+
+#menuPrincipal ul li {
+    margin-left: 25%;
+    margin-right: 6%;
+    line-height: 65px;
+    padding-right: 15px;
+    margin-top: 95px;
+    font-size: 1.8rem;
+}
+
+
+#menuPrincipal ul li a:hover,
+#menuPrincipal ul li a.active{
+    color: var(--marronClair);
+}
+
+.bienvenue{
+    background-color: var(--marronFoncer);
+    font-size: 2.2rem;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.compagnie{
+    background-color: var(--marronClair);
+    font-size: 2.3rem;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.rafiot{
+    background-color: var(--marronFoncer);
+    font-size: 2.3rem;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===========================slider======================= */
+
+#premierSlider{
+    padding-bottom: 20px;
+}
+
+.slider-wrapper{
+    background-color: var(--marronClair);
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+#deuxiemeSlider{
+    margin-top: 5px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#descriptif,
+#descriptif2{
+    padding: 15px;
+    border: white solid 3px;
+    margin: 2.5%;
+    box-shadow: 4px 8px 4px 8px rgba(0,0,0,.2);
+}
+
+#descriptif p,
+#descriptif2 p{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* ===============Formulaire======= */
+
+#formContact{
+    font-size:1.1rem;
+    font-family: 'poppins';
+    background-color: var(--marronClair);
+    color:black;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 9%;
+}
+
+#formContact p{
+    border:solid 1px var(--marronFoncer);
+    width:80%;
+    margin:16px 8px;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size:1.2rem;
+    background-color: white;
+}
+
+#formContact p input[type="text"],
+#formContact p input[type="email"]{
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 10px 20px 0px;
+    border: none;
+    background-color: white;
+}
+
+#formContact p input[type="text"],
+#formContact p input[type="email"],
+#formContact p textarea{
+    outline: none;
+}
+
+#madame{
+    margin-left: 15px;
+}
+
+#formContact p:nth-of-type(1){
+    background-color: var(--marronClair);
+    border: none;
+    color: white;
+}
+
+#formContact p:nth-of-type(8){
+    background-color: var(--marronClair);
+}
+
+#formContact p:nth-of-type(7){
+    background-color: var(--marronClair);
+    border: 1px;
+    color: white;
+    border:solid 1px var(--marronFoncer);
+    font-size: 1.5rem;
+}
+
+#formContact p input::placeholder,
+#formContact p textarea::placeholder{
+    color:rgb(0, 0, 0);
+    opacity:1;
+    font-family: 'Poppins';
+    font-size:1.5rem;
+}
+
+#formContact p input{
+    font-size: 1.5rem;
+}
+
+#formContact textarea{
+    width:100%;
+    border:none;
+    font-family: 'Poppins';
+    font-size:1.5rem;
+}
+
+#formContact p:nth-of-type(8){
+    border:none;
+    text-align: right;
+}
+
+#formContact .bouton{
+    border:none;
+    background-color: var(--marronFoncer);
+    color: black;
+    padding:8px 24px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-size:1.7rem;
+}
+
+#formContact p a{
+    color:black;
+}
+
+#formContact p a:hover{
+    text-decoration: underline;
+}
+
+iframe{
+    width: 100%;
+    height: 500px;
+}
+
+.hr2{
+    border: none;
+    display: none;
+}
+
+.hr1{
+    border: none;
+}
+
+.hr5{
+    padding: 60px;
+    border:none;
+    background-color: var(--marronClair);
+}
+/* ==========Mentions Légales======= */
+
+.mentionLegales h2{
+    font-size: 2.2rem;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--marronClair);
+
+}
+
+.mentionLegales p{
+    font-size: 1.7rem;
+    padding: 20px;
+    line-height: 3rem;
+}
+
+/* =============ACTUALITES======= */
+
+.blocArticle{
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    margin: 15px;
+    padding-top: 15px;
+    margin:0 auto ;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    box-shadow: 4px 8px 4px 8px rgba(0,0,0,.2);
+}
+
+.blocArticle h2{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2.2rem;
+}
+
+.article1 p{
+    padding-top: 25px;
+    padding: 20px;
+    font-size: 1.7rem;
+}
+
+.article1 img{
+    width: 100%;
+} 
+
+.article2 h2{
+    text-align: center;
+    padding-top: 25px;
+    font-size: 2.2rem;
+}
+
+.article2 p{
+    padding-top: 25px;
+    padding: 20px;
+    font-size: 1.7rem;
+}
+
+.article2 img{
+    width: 100%;
+}
+
+.hr3{
+    background-color: var(--marronFoncer);
+    border: none;
+    padding: 70px;
+}
+
+
+/* ==============Footer========== */
+
+#pied{
+    background-color: var(--marronClair);
+    font-size: 1.5rem;
+}
+
+#bas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logoFooter{
+    display: flex;
+    background-color: var(--marronFoncer);
+    justify-content: center;
+    padding: 15px;
+}
+
+#pied #bas{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#pied #bas .colonne a{
+    color: black;
+    font-size: 1.5rem;
+}
+
+#aside{
+    text-align: left;
+}
+
+#pied #bas h3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#pied #mentionLegales{
+    display: flex;
+    color: white;
+    justify-content: center;
+    margin: 20px;
+}
+
+#pied #copyright{
+    background-color: var(--marronFoncer);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#pied #bas .colonne a:hover{
+    opacity: 0.6;
+}
+
+/* ====Politique de confidentialitér=== */
+
+.politique_confidentialite p{
+    font-size: 1.7rem;
+    padding: 15px;
+    line-height: 3rem;
+    margin:30px;
+    background-color: var(--marronClair);
+    border: 3px solid white;
+    box-shadow: 4px 8px 4px 8px rgba(0,0,0,.2);
+}
+
+/* Ecran > 768px */
+@media screen and (min-width:950px){
+
+#bandeau{
+    display: flex;
+    justify-content: space-between;
+}
+
+#menuPrincipal{
+    display: flex;
+}
+
+#menuPrincipal li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menuPrincipal ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 24px;
+        
+}
+
+#menuPrincipalMobile{
+    display: none;
+}
+
+#burger {
+    display: none;
+}
+
+.bienvenue{
+    background-color: var(--marronClair);
+}
+
+.compagnie{
+    background-color: var(--marronFoncer);
+}
+
+/* ============SLIDER======== */
+
+.slider-wrapper{
+    width: 47%;
+}
+
+#slider-wrapper1,
+#slider-wrapper2{
+    margin-top: 2.5%;
+}
+
+#premierSlider{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1%;
+    margin-right: 1%;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+#descriptif{
+    width: 47%;
+    padding: 10px;
+}
+
+#descriptif h1{
+    font-size: 2.2rem;
+}
+
+#descriptif p{
+    font-size: 1.3rem;
+}
+
+#deuxiemeSlider{
+    flex-direction: row;
+    display: flex;
+    margin-left: 1%;
+    margin-right: 1%;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+#descriptif2{
+    width: 47%;
+}
+
+#descriptif2 h1{
+    font-size: 2.2rem;
+}
+
+#descriptif2 p{
+    font-size: 1.5rem;
+}
+
+/* ========FORMULAIRE========= */
+
+.formulaire{
+    display: flex;
+    width: 100%;
+    background-color: var(--marronFoncer);
+}
+
+#formContact{
+    flex-direction: left;
+    width: 50%;
+    background-color: var(--marronFoncer);
+}
+
+#map{
+    flex-direction: right;
+    width: 50%;
+    height: 800px;
+    margin-top: 70px;
+    margin-right: 70px;
+}
+
+#formContact p:nth-of-type(1){
+    background-color: var(--marronFoncer);
+    border: none;
+    color: white;
+}
+
+#formContact p:nth-of-type(8){
+    background-color: var(--marronFoncer);
+}
+
+#formContact p:nth-of-type(7){
+    background-color: var(--marronFoncer);
+    border:solid 1px var(--marronClair);
+}
+
+#formContact .bouton{
+    background-color: var(--marronClair);
+}
+
+.hr2{
+    display: flex;
+    padding: 60px;
+}
+
+.hr1{
+    display: none;
+}
+
+/* ======= MENTIONS LEGALES======= */
+
+.bienvenue{
+    color: black;
+}
+
+.mentionLegales{
+    background-color: var(--marronFoncer);
+    color: white;
+}
+
+.mentionLegales h2{
+    background-color: var(--marronFoncer);
+
+}
+
+.hr2{
+    background-color: var(--marronClair);
+}
+
+/* =======ACTUALITES======== */
+
+main{
+    background-color: var(--marronFoncer);
+}
+
+.blocArticle {
+    background-color: var(--marronClair);
+}
+
+.article1 img{
+    width: 50%;
+}
+
+
+.article2 img{
+    width: 50%;
+
+}
+
+.blocArticle figure{
+    display: flex;
+    width: 100%;
+}
+
+.hr3{
+    background-color: var(--marronClair);
+    border: none;
+    padding: 60px;
+}
+
+/* Ancienne mise en page fonctionnel */
+
+/* .blocArticle{
+    width: 96%;
+    margin-left: 30px;
+    border: 3px solid white;
+    box-shadow: 4px 8px 4px 8px rgba(0,0,0,.2);
+}
+
+.blocArticle h2{
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.article1,
+.article2{
+    display: flex;
+}
+
+.article1 p,
+.article2 p{
+    width: 47%;
+    padding: 20px;
+    text-align: center;
+}
+
+.article1 img{
+    width: 47%;
+    margin-left: 70px;
+}
+
+.article2 img{
+    width: 100%;
+    margin-left: 70px;
+}
+
+.article2 h2{
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.article2 p{
+    width: 47%;
+    text-align: center;
+}
+
+.article2 img{
+    width: 35%;
+}
+
+.hr3{
+    background-color: var(--marronFoncer);
+    border: none;
+    padding: 70px;
+}
+ */
+
+/*=========FOOTER==============*/
+#pied{
+    font-size: 2rem;
+}
+
+#pied #bas .colonne a{
+    font-size: 2rem;
+}
+
+}
+ 
+

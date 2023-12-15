@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La compagnie la chaloupe</title>
+    <!-- Police Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Police Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet">
+    <!-- cdn du menu burger -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Slider -->
+    <link rel="stylesheet" href="themes/default/default.css">
+    <link rel="stylesheet" href="nivo-slider.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- =====Header Dekstop===== -->
+    <header id="bandeau">
+        <a href="index.html"><img src="images_du_sites/logo_chaloupe.png" alt="logo"></a>
+        <nav id="menuPrincipal">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="actualite.html">Actualités</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ======Header Mobile===== -->
+    <div id="burger">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav id="menuPrincipalMobile">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="actualite.html">Actualités</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- ==== FORMULAIRE ==== -->
+        <hr class="hr1">
+        <h1 class="bienvenue">Nous contacter
+        </h1>
+        <section class="formulaire">
+            <form action="envoyerform.php" method="post" id="formContact">
+                <p>
+                    <input type="radio" name="choix" id="monsieur" value="Monsieur"><label for="monsieur">
+                        Monsieur</label>
+                    <input type="radio" name="choix" id="madame" value="Madame"><label for="madame"> Madame</label>
+                </p>
+                <p>
+                    <input type="text" name="nom" placeholder="Nom">
+                </p>
+                <p>
+                    <input type="text" name="prenom" placeholder="Prénom">
+                </p>
+                <p>
+                    <input type="email" name="email" placeholder="Email">
+                </p>
+                <p>
+                    <input type="text" name="sujet" placeholder="Sujet">
+                </p>
+                <p>
+                    <textarea name="message" rows="8" placeholder="Votre message"></textarea>
+                </p>
+                <p>
+                    <input type="checkbox" name="rgpd" id="maCheckbox" value="rgpd"><label for="rgpd">
+                        J'autorise ce site à utiliser mes données personnelles selon
+                        notre <a href="Politique_de_confidentialiter.html">politique de Confidentialité</a></label>
+                </p>
+                <!--             <p>
+                <input type="submit" value="Envoyer" class="bouton">
+            </p> -->
+                <p>
+                    <button type="button" class="bouton" id="monBouton" disabled>Envoyer</button>
+                </p>
+            </form>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755
+                .356166601197!2d-0.47900452329977233!3d46.322622675755206!2m3!1f0!2f0!3
+                f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48072e2b56be8caf%3A0x4fcd096dc4f
+                53f3b!2s30%20Chem.%20des%20Coteaux%20de%20Ribray%2C%2079000%20Niort!5e0
+                !3m2!1sfr!2sfr!4v1701947273388!5m2!1sfr!2sfr" style="border:0;" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+    <hr class="hr5">
+    <footer id="pied">
+        <figure class="logoFooter">
+            <a href="index.html"><img src="images_du_sites/logo_chaloupe.png" alt="La compagbie la chaloupe"></a>
+        </figure>
+        <aside id="bas" class="container">
+            <div id="adresse" class="colonne">
+                <h3>Adresse</h3>
+                <address>
+                    30 Chemin des <br>
+                    coteaux <br>
+                    de Ribray<br>
+                    79000 Niort<br>
+                    05 49 73 53 17<br>
+                </address>
+            </div>
+            <div id="reseaux" class="colonne">
+                <h3>Nous Suivre</h3>
+                <a href="https://www.facebook.com/lacompagnielachaloupe" target="_blank"><i
+                        class="fa-brands fa-square-facebook"> Facebook</i></a>
+            </div>
+        </aside>
+        <div id="mentionLegales">
+            <a href="mentionLegales.html">Mention Légales</a>
+        </div>
+        <div id="copyright">
+            <p>Copyright &copy; 2023 - Greta Bretagne Sud</p>
+        </div>
+    </footer>
+    <script src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $("#burger i").click(function () {
+            $("#menuPrincipalMobile ul").addClass("on").slideToggle(1500);
+        });
+
+        let maCheckbox = document.getElementById('maCheckbox');
+        let monBouton = document.getElementById('monBouton');
+
+        maCheckbox.addEventListener('change', function () {
+            monBouton.disabled = !maCheckbox.checked;
+        });
+
+        monBouton.addEventListener('click', function () {
+            window.location.href = 'images_du_sites/Sans-titre-4.jpg';
+        });
+
+    </script>
+</body>
+
+</html>
